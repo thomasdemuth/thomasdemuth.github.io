@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thomas Demuth</title>
+<meta name="description" content="Games, maps, videos, and other things made by Thomas Demuth.">
+<style>
+  :root {
+    --ink: #1c1c1c;
+    --muted: #666;
+    --line: #e4e4dd;
+    --tile: #fafaf7;
+    --grout: #dcdcd4;
+    --band: #2b4a7a;
+    --band-dark: #1d3557;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: #fff;
+    color: var(--ink);
+    font: 17px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  /* Subway tile header */
+  .tiles {
+    background-color: var(--tile);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M0 .5H56M0 28.5H56M.5 0V28M28.5 28V56' stroke='%23dcdcd4'/%3E%3C/svg%3E");
+    background-size: 56px 56px;
+    background-position: center top;
+    padding: 56px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--band-dark);
+    box-shadow: inset 0 -12px 0 var(--band);
+  }
+  .tablet {
+    display: inline-block;
+    margin: 0;
+    padding: 14px 28px;
+    background: var(--band);
+    color: #fff;
+    font-size: clamp(22px, 6.2vw, 34px);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    box-shadow: 0 0 0 4px var(--tile), 0 0 0 8px var(--band-dark);
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 36px 20px 56px;
+  }
+  .intro {
+    margin: 0 0 36px;
+    font-size: 19px;
+  }
+  h2 {
+    margin: 40px 0 0;
+    padding-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--band-dark);
+    border-bottom: 2px solid var(--band-dark);
+  }
+  h2:first-of-type { margin-top: 0; }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .name {
+    display: block;
+    font-weight: 700;
+  }
+  a.name {
+    color: var(--band);
+    text-decoration: none;
+  }
+  a.name:hover, a.name:focus { text-decoration: underline; }
+  /* Sign-style arrow, drawn as a shape (not a text character) */
+  a.name::after {
+    content: "";
+    display: inline-block;
+    width: 0.78em;
+    height: 0.78em;
+    margin-left: 0.4em;
+    vertical-align: -0.06em;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M1 12H20M11.5 3.5L20 12L11.5 20.5' fill='none' stroke='%23000' stroke-width='3.6'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M1 12H20M11.5 3.5L20 12L11.5 20.5' fill='none' stroke='%23000' stroke-width='3.6'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+  .about {
+    display: block;
+    color: var(--muted);
+    font-size: 16px;
+  }
+  .soon .name { color: var(--muted); font-weight: 400; }
+
+  footer {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header class="tiles">
+  <h1 class="tablet">Thomas Demuth</h1>
+</header>
+
+<main>
+  <p class="intro">Games, maps, videos, and other things I've made.</p>
+
+  <h2>Proud of</h2>
+  <ul>
+    <li>
+      <a class="name" href="https://visitnycgame.store">Visit NYC: The Subway Racing Game</a>
+      <span class="about">A board game I designed.</span>
+    </li>
+    <li>
+      <a class="name" href="https://www.youtube.com/@thomulate">THOMULATE</a>
+      <span class="about">My YouTube channel. I film New York City subway trains.</span>
+    </li>
+    <li class="soon">
+      <span class="name">Videos</span>
+      <span class="about">Coming soon.</span>
+    </li>
+  </ul>
+
+  <h2>Maps</h2>
+  <ul>
+    <!-- When a map is ready, swap its block for:
+    <li>
+      <a class="name" href="/maps/file-name.pdf">Map name</a>
+      <span class="about">One line about it.</span>
+    </li>
+    -->
+    <li class="soon">
+      <span class="name">LIRR track map</span>
+      <span class="about">Coming soon.</span>
+    </li>
+    <li class="soon">
+      <span class="name">Subway map</span>
+      <span class="about">Coming soon.</span>
+    </li>
+    <li class="soon">
+      <span class="name">Baker City maps</span>
+      <span class="about">Coming soon.</span>
+    </li>
+  </ul>
+
+  <h2>Projects</h2>
+  <ul>
+    <li class="soon">
+      <span class="name">Coming soon.</span>
+    </li>
+    <!-- To add a project, copy this block, fill it in, and delete the "Coming soon" one above:
+    <li>
+      <a class="name" href="/folder-name/">Project name</a>
+      <span class="about">One line about it.</span>
+    </li>
+    -->
+  </ul>
+</main>
+
+<footer>thomasdemuth.com</footer>
+
+</body>
+</html>
